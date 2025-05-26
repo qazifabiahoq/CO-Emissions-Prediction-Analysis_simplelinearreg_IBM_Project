@@ -1,59 +1,58 @@
 # CO₂ Emissions Prediction Analysis
 
-## Project Overview:
-This project is part of the IBM Data Science Professional Certificate on Coursera. The goal was to explore the relationship between various car attributes and CO₂ emissions, using two primary features: Engine Size and Fuel Consumption. The objective was to build linear regression models to predict CO₂ emissions and evaluate which feature had a stronger predictive power.
+## Project Overview
 
-## Objective:
-The primary goal of this analysis was to determine which car feature, between Engine Size and Fuel Consumption, better predicts CO₂ emissions. By comparing the prediction accuracy of both models, we sought to uncover which attribute most directly affects CO₂ emissions in vehicles.
+This project explores how different car attributes relate to CO₂ emissions. Specifically, it focuses on understanding which feature — Engine Size or Fuel Consumption — better predicts vehicle CO₂ emissions. Linear regression models were developed and compared to identify the stronger predictor.
 
-## Methodology:
-Two linear regression models were built using the following car attributes as features:
+## Who Will Benefit and Why
 
-- Engine Size: The size of the engine (measured in liters).
-- Fuel Consumption: The combined fuel consumption (measured in liters per 100 kilometers).
+* **Environmental researchers** can use these insights to better understand vehicle emissions drivers.
+* **Automotive manufacturers** can prioritize factors that reduce emissions during vehicle design.
+* **Policy makers and regulators** gain data-driven evidence to shape environmental standards.
+* **Consumers** may better appreciate how car features influence emissions, aiding eco-friendly choices.
 
-Before building the models, I first explored the relationship between each feature and CO₂ emissions using scatter plots. The scatter plots for Engine Size, Fuel Consumption, and Cylinders all showed a positive linear relationship with CO₂ emissions, indicating a potential for a strong predictive model.
+This project helps identify which vehicle characteristic more directly impacts emissions, enabling more targeted actions to reduce carbon footprints.
 
-- Engine Size vs. CO₂ Emissions: Positive linear relationship.
-- Cylinders vs. CO₂ Emissions: Positive linear relationship.
-- Fuel Consumption vs. CO₂ Emissions: Positive linear relationship.
+## Objective
 
-Both models were evaluated using several metrics, including **Mean Absolute Error (MAE)** and **R² Score**, which provided insight into the accuracy and reliability of the predictions.
+Determine which feature, Engine Size or Fuel Consumption, provides more accurate predictions of CO₂ emissions using regression models and evaluation metrics.
 
-### Evaluation Metrics:
-- **Mean Absolute Error (MAE)**: This metric measures the average absolute difference between predicted and actual values. A lower MAE indicates more accurate predictions.
-- **Residual Sum of Squares (MSE)**: This metric calculates the squared differences between predicted and actual values. A lower MSE indicates a better fit of the model.
-- **R² Score**: This score represents how well the model's predictions match the actual values. An R² score closer to 1 indicates a better fit.
+## How It Was Done
 
-## Findings:
+* Explored relationships between CO₂ emissions and features (Engine Size, Fuel Consumption, Cylinders) via scatter plots, confirming positive linear trends.
+* Built two separate linear regression models: one with Engine Size and one with Fuel Consumption as the predictor.
+* Evaluated model accuracy using Mean Absolute Error (MAE), Residual Sum of Squares (MSE), and R² Score.
+* Compared models to identify which feature predicts CO₂ emissions more effectively.
 
-### Model 1: Engine Size:
-The model trained using Engine Size to predict CO₂ emissions had the following evaluation results:
-- **Mean Absolute Error (MAE)**: 23.00
-- **Residual Sum of Squares (MSE)**: 893.09
-- **R² Score**: 0.76
+## Key Findings
 
-These results indicate that while Engine Size has a positive relationship with CO₂ emissions, the model's accuracy was not perfect. The **R² score** of 0.76 suggests that 76% of the variation in CO₂ emissions could be explained by Engine Size.
+1. **Does Engine Size predict CO₂ emissions well?**
+   Yes, with a positive relationship. The model explained 76% of the variation in emissions (R² = 0.76), but had a higher average prediction error (MAE = 23.00).
 
-### Model 2: Fuel Consumption:
-The model trained using Fuel Consumption to predict CO₂ emissions showed improved performance:
-- **Mean Absolute Error (MAE)**: 20.36
+2. **Is Fuel Consumption a better predictor?**
+   Yes. The model using Fuel Consumption showed a lower MAE (20.36), indicating more accurate predictions. Although the R² score wasn’t explicitly calculated, the lower error suggests stronger predictive power.
 
-This model demonstrated a lower MAE, indicating that Fuel Consumption was a more accurate predictor for CO₂ emissions than Engine Size. Although the **R² score** was not explicitly calculated in the code, the lower **MAE** suggests that Fuel Consumption offers a stronger predictive relationship.
+3. **What does this mean for understanding emissions?**
+   Fuel Consumption better reflects real-world driving factors affecting emissions compared to just engine size, which is a more static measurement.
 
-## Conclusion:
-- The analysis revealed that Fuel Consumption is a more reliable predictor for CO₂ emissions compared to Engine Size. The model trained on Fuel Consumption produced more accurate predictions, as indicated by a lower Mean Absolute Error (MAE).
-- Engine Size, while still a significant factor, did not provide as precise predictions for CO₂ emissions as Fuel Consumption did. The **R² score** for Engine Size (0.76) was relatively good but still lower than the potential of Fuel Consumption.
+## Conclusion
 
-## Data Source:
-- [CO₂ Emissions Dataset](https://open.canada.ca/data/en/dataset/98f1a129-f628-4ce4-b24d-6f16bf24dd64)
+Fuel Consumption is a more reliable and accurate predictor of CO₂ emissions than Engine Size. While both features are positively correlated with emissions, Fuel Consumption provides stronger predictive accuracy, making it a better metric for estimating vehicle emissions.
 
-## Acknowledgements:
-- Author: Saeed Aghabozorgi
-- Other Contributors:
-  - Joseph Santarcangelo
-  - Azim Hirjani
+## Recommendations
 
-## Completed by:
-Qazi Fabia Hoq  
-(as part of the Data Science Professional Certificate by IBM on Coursera)
+Focus on fuel efficiency improvements as a key strategy to reduce CO₂ emissions. Future analyses could explore combining features or incorporating additional variables to enhance predictive accuracy further.
+
+## Data Source
+
+* [CO₂ Emissions Dataset from Canadian Government Open Data Portal](https://open.canada.ca/data/en/dataset/98f1a129-f628-4ce4-b24d-6f16bf24dd64)
+
+## Acknowledgements
+
+* Project developed by Saeed Aghabozorgi
+* Contributions by Joseph Santarcangelo and Azim Hirjani
+
+## Author
+
+Qazi Fabia Hoq
+(as part of the IBM Data Science Professional Certificate on Coursera)
